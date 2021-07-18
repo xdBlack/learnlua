@@ -16,3 +16,21 @@ end
 local p = People("ZhangSan")
 p:sayHi()
 -------------------------------
+
+-------------------------------
+function Man(name)
+    local self = People(name)
+
+    self.sayHello = function()
+        print("Hello, "..self.name)
+    end
+
+    return self
+end
+
+local m = Man("爱因斯坦")
+m:sayHi()
+m:sayHello()
+-------------------------------
+
+
